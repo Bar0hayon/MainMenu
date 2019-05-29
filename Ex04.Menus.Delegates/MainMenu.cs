@@ -25,6 +25,5 @@ namespace Ex04.Menus.Delegates
                 }
             } while (UserSelection != -1);
         }
-
     }
 }
