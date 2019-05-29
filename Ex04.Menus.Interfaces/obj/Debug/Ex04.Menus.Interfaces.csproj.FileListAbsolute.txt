@@ -1,0 +1,6 @@
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojAssemblyReference.cache
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\baroh\source\repos\B19 Ex04 Bar 204074629 Daniel 204509780.sln\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
