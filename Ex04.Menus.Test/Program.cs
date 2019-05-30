@@ -9,35 +9,11 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-            Delegates.MainMenu DelegatesMainMenu = getDelegatesMainMenu();
+            Delegates.MainMenu DelegatesMainMenu = DelegatesBuilder.GetDelegatesMainMenu();
             DelegatesMainMenu.Start();
 
-            InterfacesBuilder interfacesBuilder = new InterfacesBuilder();
-            Interfaces.MainMenu InterfacesMainMenu = interfacesBuilder.GetMainMenu();
+            Interfaces.MainMenu InterfacesMainMenu = (new InterfacesBuilder()).GetMainMenu();
             InterfacesMainMenu.Start();
-        }
-
-        private static MainMenu getDelegatesMainMenu()
-        {
-            List<Delegates.MenuItem> ShowDateOrTimeItems = new List<MenuItem>();
-            ShowDateOrTimeItems.Add(new MenuItem("Show Time"));
-            ShowDateOrTimeItems.Add(new MenuItem("Show Date"));
-            ShowDateOrTimeItems[0].OnSelected += ShowTime_OnSelected;
-            ShowDateOrTimeItems[1].OnSelected += ShowDate_OnSelected;
-            SubMenu ShowDateOrTimeMenu = new SubMenu("Show Date/Time", ShowDateOrTimeItems);
-
-            List<Delegates.MenuItem> VersionAndDigitsItems = new List<MenuItem>();
-            VersionAndDigitsItems.Add(new MenuItem("Count Digits"));
-            VersionAndDigitsItems.Add(new MenuItem("Show Version"));
-            VersionAndDigitsItems[0].OnSelected += CountDigits_OnSelected;
-            VersionAndDigitsItems[1].OnSelected += ShowVersion_OnSelected;
-            SubMenu VersionAndDigitsMenu = new SubMenu("Version and Digits", VersionAndDigitsItems);
-
-            List<Delegates.MenuItem> MainMenuItems = new List<MenuItem>();
-            MainMenuItems.Add(ShowDateOrTimeMenu);
-            MainMenuItems.Add(VersionAndDigitsMenu);
-
-            return new MainMenu(MainMenuItems);
         }
 
         public static void ShowVersion_OnSelected(string i_ItemName)
