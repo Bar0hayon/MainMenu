@@ -35,16 +35,16 @@ namespace Ex04.Menus.Test
             switch (i_ItemTitle)
             {
                 case ("Show Time"):
-                    Program.ShowTime_OnSelected(i_ItemTitle);
+                    Program.ShowTime_OnSelected();
                     break;
                 case ("Show Date"):
-                    Program.ShowDate_OnSelected(i_ItemTitle);
+                    Program.ShowDate_OnSelected();
                     break;
                 case ("Count Digits"):
-                    Program.CountDigits_OnSelected(i_ItemTitle);
+                    Program.CountDigits_OnSelected();
                     break;
                 case ("Show Version"):
-                    Program.ShowVersion_OnSelected(i_ItemTitle);
+                    Program.ShowVersion_OnSelected();
                     break;
                 default:
                     break;

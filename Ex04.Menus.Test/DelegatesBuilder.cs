@@ -5,7 +5,7 @@ using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
-    public static class DelegatesBuilder
+    internal static class DelegatesBuilder
     {
         internal static MainMenu GetDelegatesMainMenu()
         {

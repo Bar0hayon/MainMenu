@@ -16,12 +16,12 @@ namespace Ex04.Menus.Test
             InterfacesMainMenu.Start();
         }
 
-        public static void ShowVersion_OnSelected(string i_ItemName)
+        public static void ShowVersion_OnSelected()
         {
             print("Version: 19.2.4.32");
         }
 
-        public static void CountDigits_OnSelected(string i_ItemName)
+        public static void CountDigits_OnSelected()
         {
             Console.WriteLine("Please enter a sentence: ");
             string UserInput = Console.ReadLine();
@@ -36,12 +36,12 @@ namespace Ex04.Menus.Test
             print(string.Format("The sentence you entered contains {0} Digits", CountDigits));
         }
 
-        public static void ShowDate_OnSelected(string i_ItemName)
+        public static void ShowDate_OnSelected()
         {
             print(string.Format("The Date is: {0}", DateTime.Now.Date));
         }
 
-        public static void ShowTime_OnSelected(string i_ItemName)
+        public static void ShowTime_OnSelected()
         {
             print(string.Format("The Time is: {0}", DateTime.Now.TimeOfDay));
         }
