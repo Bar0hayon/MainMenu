@@ -7,6 +7,7 @@ namespace Ex04.Menus.Delegates
     public class MainMenu
     {
         private List<MenuItem> m_MenuItems;
+
         public MainMenu(List<MenuItem> i_MenuItems)
         {
             m_MenuItems = i_MenuItems;
@@ -14,16 +15,17 @@ namespace Ex04.Menus.Delegates
 
         public void Start()
         {
-            int UserSelection;
+            int userSelection;
             do
             {
-                MenusOperator.printMenu("Main Menu", m_MenuItems, "exit");
-                UserSelection = MenusOperator.GetUserSelection(m_MenuItems.Count);
-                if (UserSelection != -1)
+                MenusOperator.PrintMenu("Main Menu", m_MenuItems, "exit");
+                userSelection = MenusOperator.GetUserSelection(m_MenuItems.Count);
+                if (userSelection != -1)
                 {
-                    m_MenuItems[UserSelection].item_Selected();
+                    m_MenuItems[userSelection].Item_Selected();
                 }
-            } while (UserSelection != -1);
+            }
+            while (userSelection != -1);
         }
     }
 }

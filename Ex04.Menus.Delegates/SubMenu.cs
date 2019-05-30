@@ -13,25 +13,26 @@ namespace Ex04.Menus.Delegates
             m_MenuItems = i_MenuItems;
         }
 
-        internal override void item_Selected()
+        internal override void Item_Selected()
         {
-            base.item_Selected();
+            base.Item_Selected();
             bool IsFinalItem = false;
-            int UserSelection;
+            int userSelection;
             do
             {
-                MenusOperator.printMenu(m_Title, m_MenuItems, "Go Back");
-                UserSelection = MenusOperator.GetUserSelection(m_MenuItems.Count);
-                if (UserSelection != -1)
+                MenusOperator.PrintMenu(m_Title, m_MenuItems, "Go Back");
+                userSelection = MenusOperator.GetUserSelection(m_MenuItems.Count);
+                if (userSelection != -1)
                 {
                     Console.Clear();
-                    m_MenuItems[UserSelection].item_Selected();
-                    if(!(m_MenuItems[UserSelection] is SubMenu))
+                    m_MenuItems[userSelection].Item_Selected();
+                    if(!(m_MenuItems[userSelection] is SubMenu))
                     {
                         IsFinalItem = true;
                     }
                 }
-            } while (!IsFinalItem && UserSelection != -1);
+            }
+            while (!IsFinalItem && userSelection != -1);
         }
     }
 }

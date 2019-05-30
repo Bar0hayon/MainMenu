@@ -24,7 +24,7 @@ namespace Ex04.Menus.Interfaces
             m_Title = i_Title;
         }
 
-        internal virtual void item_Selected()
+        internal virtual void Item_Selected()
         {
             foreach(ISelectedListener listener in m_OnSelectedListeners)
             {

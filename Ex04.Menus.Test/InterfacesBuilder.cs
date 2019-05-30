@@ -9,44 +9,42 @@ namespace Ex04.Menus.Test
     {
         public MainMenu GetInterfacesMainMenu()
         {
-            List<MenuItem> ShowDateOrTimeItems = new List<MenuItem>();
-            ShowDateOrTimeItems.Add(new MenuItem("Show Time"));
-            ShowDateOrTimeItems.Add(new MenuItem("Show Date"));
-            ShowDateOrTimeItems[0].AddOnSelectedListener(this);
-            ShowDateOrTimeItems[1].AddOnSelectedListener(this);
-            SubMenu ShowDateOrTimeMenu = new SubMenu("Show Date/Time", ShowDateOrTimeItems);
+            List<MenuItem> showDateOrTimeItems = new List<MenuItem>();
+            showDateOrTimeItems.Add(new MenuItem("Show Time"));
+            showDateOrTimeItems.Add(new MenuItem("Show Date"));
+            showDateOrTimeItems[0].AddOnSelectedListener(this);
+            showDateOrTimeItems[1].AddOnSelectedListener(this);
+            SubMenu ShowDateOrTimeMenu = new SubMenu("Show Date/Time", showDateOrTimeItems);
 
-            List<MenuItem> VersionAndDigitsItems = new List<MenuItem>();
-            VersionAndDigitsItems.Add(new MenuItem("Count Digits"));
-            VersionAndDigitsItems.Add(new MenuItem("Show Version"));
-            VersionAndDigitsItems[0].AddOnSelectedListener(this);
-            VersionAndDigitsItems[1].AddOnSelectedListener(this);
-            SubMenu VersionAndDigitsMenu = new SubMenu("Version and Digits", VersionAndDigitsItems);
+            List<MenuItem> versionAndDigitsItems = new List<MenuItem>();
+            versionAndDigitsItems.Add(new MenuItem("Count Digits"));
+            versionAndDigitsItems.Add(new MenuItem("Show Version"));
+            versionAndDigitsItems[0].AddOnSelectedListener(this);
+            versionAndDigitsItems[1].AddOnSelectedListener(this);
+            SubMenu VersionAndDigitsMenu = new SubMenu("Version and Digits", versionAndDigitsItems);
 
-            List<MenuItem> MainMenuItems = new List<MenuItem>();
-            MainMenuItems.Add(ShowDateOrTimeMenu);
-            MainMenuItems.Add(VersionAndDigitsMenu);
+            List<MenuItem> mainMenuItems = new List<MenuItem>();
+            mainMenuItems.Add(ShowDateOrTimeMenu);
+            mainMenuItems.Add(VersionAndDigitsMenu);
 
-            return new MainMenu(MainMenuItems);
+            return new MainMenu(mainMenuItems);
         }
 
         public virtual void OnSelected(string i_ItemTitle)
         {
             switch (i_ItemTitle)
             {
-                case ("Show Time"):
+                case "Show Time":
                     Program.ShowTime_OnSelected();
                     break;
-                case ("Show Date"):
+                case "Show Date":
                     Program.ShowDate_OnSelected();
                     break;
-                case ("Count Digits"):
+                case "Count Digits":
                     Program.CountDigits_OnSelected();
                     break;
-                case ("Show Version"):
+                case "Show Version":
                     Program.ShowVersion_OnSelected();
-                    break;
-                default:
                     break;
             }
         }

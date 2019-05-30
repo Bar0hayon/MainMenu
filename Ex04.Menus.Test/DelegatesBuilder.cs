@@ -9,25 +9,25 @@ namespace Ex04.Menus.Test
     {
         internal static MainMenu GetDelegatesMainMenu()
         {
-            List<Delegates.MenuItem> ShowDateOrTimeItems = new List<MenuItem>();
-            ShowDateOrTimeItems.Add(new MenuItem("Show Time"));
-            ShowDateOrTimeItems.Add(new MenuItem("Show Date"));
-            ShowDateOrTimeItems[0].OnSelected += Program.ShowTime_OnSelected;
-            ShowDateOrTimeItems[1].OnSelected += Program.ShowDate_OnSelected;
-            SubMenu ShowDateOrTimeMenu = new SubMenu("Show Date/Time", ShowDateOrTimeItems);
+            List<Delegates.MenuItem> showDateOrTimeItems = new List<MenuItem>();
+            showDateOrTimeItems.Add(new MenuItem("Show Time"));
+            showDateOrTimeItems.Add(new MenuItem("Show Date"));
+            showDateOrTimeItems[0].OnSelected += Program.ShowTime_OnSelected;
+            showDateOrTimeItems[1].OnSelected += Program.ShowDate_OnSelected;
+            SubMenu ShowDateOrTimeMenu = new SubMenu("Show Date/Time", showDateOrTimeItems);
 
-            List<Delegates.MenuItem> VersionAndDigitsItems = new List<MenuItem>();
-            VersionAndDigitsItems.Add(new MenuItem("Count Digits"));
-            VersionAndDigitsItems.Add(new MenuItem("Show Version"));
-            VersionAndDigitsItems[0].OnSelected += Program.CountDigits_OnSelected;
-            VersionAndDigitsItems[1].OnSelected += Program.ShowVersion_OnSelected;
-            SubMenu VersionAndDigitsMenu = new SubMenu("Version and Digits", VersionAndDigitsItems);
+            List<Delegates.MenuItem> versionAndDigitsItems = new List<MenuItem>();
+            versionAndDigitsItems.Add(new MenuItem("Count Digits"));
+            versionAndDigitsItems.Add(new MenuItem("Show Version"));
+            versionAndDigitsItems[0].OnSelected += Program.CountDigits_OnSelected;
+            versionAndDigitsItems[1].OnSelected += Program.ShowVersion_OnSelected;
+            SubMenu VersionAndDigitsMenu = new SubMenu("Version and Digits", versionAndDigitsItems);
 
-            List<Delegates.MenuItem> MainMenuItems = new List<MenuItem>();
-            MainMenuItems.Add(ShowDateOrTimeMenu);
-            MainMenuItems.Add(VersionAndDigitsMenu);
+            List<Delegates.MenuItem> mainMenuItems = new List<MenuItem>();
+            mainMenuItems.Add(ShowDateOrTimeMenu);
+            mainMenuItems.Add(VersionAndDigitsMenu);
 
-            return new MainMenu(MainMenuItems);
+            return new MainMenu(mainMenuItems);
         }
     }
 }

@@ -5,15 +5,15 @@ using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
-            Delegates.MainMenu DelegatesMainMenu = DelegatesBuilder.GetDelegatesMainMenu();
-            DelegatesMainMenu.Start();
+            Delegates.MainMenu delegatesMainMenu = DelegatesBuilder.GetDelegatesMainMenu();
+            delegatesMainMenu.Start();
 
-            Interfaces.MainMenu InterfacesMainMenu = (new InterfacesBuilder()).GetInterfacesMainMenu();
-            InterfacesMainMenu.Start();
+            Interfaces.MainMenu interfacesMainMenu = (new InterfacesBuilder()).GetInterfacesMainMenu();
+            interfacesMainMenu.Start();
         }
 
         public static void ShowVersion_OnSelected()
@@ -24,16 +24,17 @@ namespace Ex04.Menus.Test
         public static void CountDigits_OnSelected()
         {
             Console.WriteLine("Please enter a sentence: ");
-            string UserInput = Console.ReadLine();
-            int CountDigits = 0;
-            foreach(char SingleCharacter in UserInput.ToCharArray())
+            string userInput = Console.ReadLine();
+            int countDigits = 0;
+            foreach(char SingleCharacter in userInput.ToCharArray())
             {
                 if(SingleCharacter >= '0' && SingleCharacter <= '9')
                 {
-                    CountDigits++;
+                    countDigits++;
                 }
             }
-            print(string.Format("The sentence you entered contains {0} Digits", CountDigits));
+
+            print(string.Format("The sentence you entered contains {0} Digits", countDigits));
         }
 
         public static void ShowDate_OnSelected()
