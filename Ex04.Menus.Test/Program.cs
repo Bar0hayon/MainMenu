@@ -9,6 +9,7 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
+            /////adding something
             Delegates.MainMenu DelegatesMainMenu = DelegatesBuilder.GetDelegatesMainMenu();
             DelegatesMainMenu.Start();
 
