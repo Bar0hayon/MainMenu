@@ -12,7 +12,7 @@ namespace Ex04.Menus.Test
             Delegates.MainMenu DelegatesMainMenu = DelegatesBuilder.GetDelegatesMainMenu();
             DelegatesMainMenu.Start();
 
-            Interfaces.MainMenu InterfacesMainMenu = (new InterfacesBuilder()).GetMainMenu();
+            Interfaces.MainMenu InterfacesMainMenu = (new InterfacesBuilder()).GetInterfacesMainMenu();
             InterfacesMainMenu.Start();
         }
 

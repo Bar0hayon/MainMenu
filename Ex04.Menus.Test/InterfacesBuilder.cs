@@ -7,7 +7,7 @@ namespace Ex04.Menus.Test
 {
     public class InterfacesBuilder : ISelectedListener
     {
-        public MainMenu GetMainMenu()
+        public MainMenu GetInterfacesMainMenu()
         {
             List<MenuItem> ShowDateOrTimeItems = new List<MenuItem>();
             ShowDateOrTimeItems.Add(new MenuItem("Show Time"));
