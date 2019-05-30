@@ -39,12 +39,12 @@ namespace Ex04.Menus.Test
 
         public static void ShowDate_OnSelected()
         {
-            print(string.Format("The Date is: {0}", DateTime.Now.Date));
+            print(string.Format("The Date is: {0}", DateTime.Now.ToShortDateString()));
         }
 
         public static void ShowTime_OnSelected()
         {
-            print(string.Format("The Time is: {0}", DateTime.Now.TimeOfDay));
+            print(string.Format("The Time is: {0}", DateTime.Now.ToString("hh:mm:ss tt")));
         }
 
         private static void print(string i_StringToPrint)
